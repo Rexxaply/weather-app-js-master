@@ -10,7 +10,7 @@ async function checkWeather(city){
   const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
   if(response.status == 404){
-    window.alert("Kota Tidak Ditemukan!");
+    window.alert('Kota ' + city + ' tidak ditemukan');
   }
 
   var data = await response.json();
